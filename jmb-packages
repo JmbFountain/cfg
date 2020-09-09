@@ -1,0 +1,11 @@
+Package: *
+Pin: release v=unstable
+Pin-Priority: 1000
+
+Package: *
+Pin release v=testing
+Pin-Priority: 100
+
+Package: *
+Pin release v=kali-rolling
+Pin-Priority: 1
