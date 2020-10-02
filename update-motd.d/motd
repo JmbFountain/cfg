@@ -1,0 +1,7 @@
+#!/bin/bash
+
+LOGIN="Logging in $USER"+"@"+$(uname -m)
+DISTRO="Distribution: $(lsb_release -si) $(lsb_release -sr) $(lsb_release -sc)"
+TIME="Uptime: $(uptime) Date: $(date)"
+
+echo "$LOGIN \n $DISTRO \n $TIME"

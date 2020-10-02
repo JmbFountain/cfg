@@ -1,0 +1,6 @@
+#!/bin/bash
+cp ./.bash_aliases ~/.bash_aliases
+
+if
+cp -f ./bashrc ~/.bashrc
+fi
