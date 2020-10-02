@@ -1,9 +1,0 @@
-#!/bin/bash
-
-LOGIN="Logged in as $USER""@"$(hostname)
-DISTRO="Distribution: $(lsb_release -si) $(lsb_release -sr) $(lsb_release -sc)"
-TIME="Uptime: $(uptime) Date: $(date)"
-
-echo "$LOGIN
- $DISTRO 
- $TIME"f
