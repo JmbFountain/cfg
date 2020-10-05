@@ -2,8 +2,23 @@
 
 LOGIN="Logged in as $USER""@"$(hostname)
 DISTRO="Distribution: $(lsb_release -si) $(lsb_release -sr) $(lsb_release -sc)"
-TIME="Uptime: $(uptime) Date: $(date)"
+KERNEL="$(uname -r)"
+TIME="Date: $(date), $(uptime -p) "
+SOCKETS=$(lscpu | grep 'Socket(s)' | uniq | cut -d":" -f2 | tr -d " ")
+CORES=$(grep 'cpu cores' /proc/cpuinfo | uniq | cut -d":" -f2 | tr -d " ")
+CPUMODEL=$(grep 'model name' /proc/cpuinfo | uniq | cut -d":" -f2)
+THREADS=$(lscpu | grep 'Thread' | uniq | cut -d":" -f2 | tr -d " ")
+ALLTHREADS=$(lscpu | grep 'CPU(s)' | uniq | head -1 |cut -d":" -f2 | tr -d " ")
+USEDMEM=$(free -h | awk '/^Mem:/{print $3}')
+ALLMEM=$(free -h | awk '/^Mem:/{print $2}')
 
-echo "$LOGIN
- $DISTRO 
- $TIME"f
+echo "$LOGIN"
+echo "$DISTRO"
+echo "Kernel $KERNEL"
+echo "$TIME"
+echo "$SOCKETS Socket x $CORES Cores x $THREADS Threads ($ALLTHREADS total) $CPUMODEL"
+echo "$USEDMEM of $ALLMEM RAM used"
+
+
+echo "Currently logged in:"
+echo " $(who)"
