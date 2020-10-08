@@ -14,7 +14,6 @@ alias mount='mount |column -t'
 alias wget='wget -c'
 #alias date='date -I'
 alias utc='date -u'
-#alias work='sudo openvpn ~/Downloads/jmb@188.73.125.52.ovpn'
 ## a quick way to get out of current directory ##
 alias ..='cd ..'
 alias ...='cd ../../../'
