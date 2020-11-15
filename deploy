@@ -1,8 +1,8 @@
 #!/bin/bash
 echo "deploying config files"
 cp ./.bash_aliases ~/.bash_aliases
-cp -f ./bashrc ~/.bashrc
-cp -f ./sources.list /etc/apt/
-cp -f ./jmb-packages /etc/apt/preferences.d/
+cp -f ./.bashrc ~/.bashrc
+#cp -f ./sources.list /etc/apt/
+#cp -f ./jmb-packages /etc/apt/preferences.d/
 cp -f ./update-motd.d/motd /etc/update-motd.d/
 cp -f ./sshd_conf /etc/ssh/
