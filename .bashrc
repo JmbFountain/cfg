@@ -58,9 +58,9 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\u:\w\$ '
 fi
 unset color_prompt force_color_prompt
 
@@ -124,5 +124,8 @@ PERL_MB_OPT="--install_base \"/home/johannes/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/johannes/perl5"; export PERL_MM_OPT;
 export LIBVIRT_DEFAULT_URI="qemu:///system"
 
+export GPGKEY=AB10360A1CF80AAA53BCF37302AC853CCE6D9D0E
+export PATH="$HOME/scripts:$HOME/.cargo/bin:$PATH"
 
-export PATH="$HOME/scripts:$PATH"
+#export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+#gpgconf --launch gpg-agent

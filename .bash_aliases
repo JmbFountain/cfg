@@ -5,15 +5,17 @@ alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 #more functions
 alias ..='cd ..'
-alias ll='ls -alF'
-alias yeet='rm'
+alias ll='ls -alFh'
+alias yeet='rm -rf'
 alias simp='gimp'
 alias diff='colordiff'
 alias mount='mount |column -t'
+alias df='df-h'
 #alias update='~/scripts/update.sh'
 alias wget='wget -c'
 #alias date='date -I'
 alias utc='date -u'
+#alias work='sudo openvpn ~/Downloads/jmb@188.73.125.52.ovpn'
 ## a quick way to get out of current directory ##
 alias ..='cd ..'
 alias ...='cd ../../../'
@@ -28,12 +30,12 @@ alias path='echo -e ${PATH//:/\\n}'
 alias now='date +"%T"'
 alias nowtime=now
 alias nowdate='date +"%d-%m-%Y"'
-alias su='sudo -i'
+#alias su='sudo -i'
 alias please='sudo'
 alias svi='sudo vi'
 
-#cat to bat
-alias cat='batcat'
+#batcat to bat
+alias bat='batcat'
 
 ## pass options to free ##
 alias meminfo='free -m -l -t'
